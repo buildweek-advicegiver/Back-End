@@ -1,6 +1,6 @@
 # Back-End
 
-Product Canvas: https://docs.google.com/document/d/1PRuUblVfB9gsop6rZ4gl-piXrkPA5qsSKkP9Rg0Duh0/edit
+Product Canvas: https://docs.google.com/document/d/1S90eZTHKlMqOA5b_s7Ty6g862dDSAmHBqCksB503afs/edit
 
 link for Node: https://www.notion.so/04382aff1e09483dac0e29446ec4ef6f?v=3c1f346ae7b04962919385e74176d883
 
