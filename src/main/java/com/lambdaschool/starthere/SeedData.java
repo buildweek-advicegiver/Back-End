@@ -40,7 +40,7 @@ public class SeedData implements CommandLineRunner
         admins.add(new UserRoles(new User(), r1));
         admins.add(new UserRoles(new User(), r2));
         admins.add(new UserRoles(new User(), r3));
-        User u1 = new User("Firealem", "Erko ", "firealemg@yahoo.com","admin", "password", admins);
+        User u1 = new User("Firealem", "Erko ", "firealemg@yahoo.com","admin", "password", "Male", 35,"advice giver", admins);
         u1.getQuotes().add(new Quote("A creative man is motivated by the desire to achieve, not by the desire to beat others", u1));
         u1.getQuotes().add(new Quote("The question isn't who is going to let me; it's who is going to stop me.", u1));
         userService.save(u1);
@@ -49,13 +49,13 @@ public class SeedData implements CommandLineRunner
         ArrayList<UserRoles> advisors = new ArrayList<>();
         advisors.add(new UserRoles(new User(), r3));
         advisors.add(new UserRoles(new User(), r2));
-        User u2 = new User("Shuluka", "Hi'i", "shuluka@yahoo.com","shuluka", "iloveareke", advisors);
+        User u2 = new User("Shuluka", "Hi'i", "shuluka@yahoo.com","shuluka", "iloveareke","Male", 40,"advice seeker", advisors);
         userService.save(u2);
 
         // user
         ArrayList<UserRoles> users = new ArrayList<>();
         users.add(new UserRoles(new User(), r2));
-        User u3 = new User("Barnbarn", "Bilbo", "bilbo@yahoo.com","barnbarn", "ILuvM4th!", users);
+        User u3 = new User("Barnbarn", "Bilbo", "bilbo@yahoo.com","barnbarn", "ILuvM4th!","Male", 50,"advice seeker", users);
         u3.getQuotes().add(new Quote("Live long and prosper", u3));
         u3.getQuotes().add(new Quote("The enemy of my enemy is the enemy I kill last", u3));
         u3.getQuotes().add(new Quote("Beam me up", u3));
@@ -63,12 +63,12 @@ public class SeedData implements CommandLineRunner
 
         users = new ArrayList<>();
         users.add(new UserRoles(new User(), r2));
-        User u4 = new User("Bobby", "Gibbs", "bobby@yahoo.com","Bob", "password", users);
+        User u4 = new User("Bobby", "Gibbs", "bobby@yahoo.com","Bob", "password","Male", 36,"advice seeker", users);
         userService.save(u4);
 
         users = new ArrayList<>();
         users.add(new UserRoles(new User(), r2));
-        User u5 = new User("Filfilu", "Kibebew", "filfilu@yahoo.com","Jane", "password", users);
+        User u5 = new User("Jane", "Ryan", "filfilu@yahoo.com","Jane", "password","Female", 40,"advice seeker", users);
         userService.save(u5);
     }
 }

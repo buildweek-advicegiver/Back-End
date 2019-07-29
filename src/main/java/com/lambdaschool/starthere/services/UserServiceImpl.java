@@ -123,7 +123,18 @@ public class UserServiceImpl implements UserDetailsService, UserService
                 {
                     currentUser.setPasswordNoEncrypt(user.getPassword());
                 }
-
+                if (user.getUsertype()!=null)
+                {
+                    currentUser.setUsertype(user.getUsertype());
+                }
+                if (user.getGender()!=null)
+                {
+                    currentUser.setGender(user.getGender());
+                }
+                if (user.getAge()>0)
+                {
+                    currentUser.setAge(user.getAge());
+                }
                 if (user.getUserRoles().size() > 0)
                 {
                     // with so many relationships happening, I decided to go

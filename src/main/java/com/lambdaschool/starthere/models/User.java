@@ -33,6 +33,12 @@ public class User extends Auditable
     @Column(nullable = false)
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
+    @Column(nullable = false)
+    private String gender;
+    @Column(nullable = false)
+    private long age;
+    @Column(nullable = false)
+    private String usertype;
 
     @OneToMany(mappedBy = "user",
                cascade = CascadeType.ALL)
@@ -48,13 +54,17 @@ public class User extends Auditable
     public User()
     {
     }
-    public User(String firstname, String lastname, String email, String username, String password, List<UserRoles> userRoles)
+    public User(String firstname, String lastname, String email, String username, String password,String gender, long age,String usertype, List<UserRoles> userRoles)
     {
         setUsername(username);
         setPassword(password);
         setEmail(email);
         setFirstname(firstname);
         setLastname(lastname);
+        setUsertype(usertype);
+        setGender(gender);
+        setAge(age);
+
         for (UserRoles ur : userRoles)
         {
             ur.setUser(this);
@@ -91,7 +101,35 @@ public class User extends Auditable
         this.email = email;
     }
 
+    public String getGender()
+    {
+        return gender;
+    }
 
+    public void setGender(String gender)
+    {
+        this.gender = gender;
+    }
+
+    public long getAge()
+    {
+        return age;
+    }
+
+    public void setAge(long age)
+    {
+        this.age = age;
+    }
+
+    public String getUsertype()
+    {
+        return usertype;
+    }
+
+    public void setUsertype(String usertype)
+    {
+        this.usertype = usertype;
+    }
 
     public long getUserid()
     {
