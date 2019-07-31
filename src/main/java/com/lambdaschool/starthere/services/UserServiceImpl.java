@@ -74,6 +74,9 @@ public class UserServiceImpl implements UserDetailsService, UserService
         newUser.setEmail(user.getEmail());
         newUser.setFirstname(user.getFirstname());
         newUser.setLastname(user.getLastname());
+        newUser.setGender(user.getGender());
+        newUser.setAge(user.getAge());
+        newUser.setUsertype(user.getUsertype());
         ArrayList<UserRoles> newRoles = new ArrayList<>();
 
         for (UserRoles ur : user.getUserRoles())
@@ -167,5 +170,12 @@ public class UserServiceImpl implements UserDetailsService, UserService
             throw new ResourceNotFoundException(authentication.getName());
         }
 
+    }
+
+    @Override
+    public User myposts() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        User me = userrepos.findByUsername(authentication.getName());
+        return me;
     }
 }

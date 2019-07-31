@@ -13,48 +13,59 @@ import java.util.List;
 
 @Entity
 @Table(name = "users")
-public class User extends Auditable
+public class User
 {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long userid;
 
     @Column(nullable = false)
+    private long age;
+    @Column(nullable = false)
     private String firstname;
     @Column(nullable = false)
     private String lastname;
     @Column(nullable = false)
     private String email;
-
     @Column(nullable = false,
             unique = true)
     private String username;
-
     @Column(nullable = false)
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
     @Column(nullable = false)
     private String gender;
     @Column(nullable = false)
-    private long age;
-    @Column(nullable = false)
     private String usertype;
-
     @OneToMany(mappedBy = "user",
                cascade = CascadeType.ALL)
     @JsonIgnoreProperties("user")
     private List<UserRoles> userRoles = new ArrayList<>();
-
     @OneToMany(mappedBy = "user",
                cascade = CascadeType.ALL,
                orphanRemoval = true)
     @JsonIgnoreProperties("user")
     private List<Quote> quotes = new ArrayList<>();
 
+    @OneToMany( mappedBy = "owner",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true)
+    private List<Post> posts;
+
+    public List<Post> getPosts()
+    {
+        return posts;
+    }
+
+    public void setPosts(List<Post> posts)
+    {
+        this.posts = posts;
+    }
+
     public User()
     {
     }
-    public User(String firstname, String lastname, String email, String username, String password,String gender, long age,String usertype, List<UserRoles> userRoles)
+    public User(long age,String email, String firstname, String gender,String lastname, String password, String username,   String usertype, List<UserRoles> userRoles)
     {
         setUsername(username);
         setPassword(password);
@@ -199,4 +210,6 @@ public class User extends Auditable
 
         return rtnList;
     }
+
+
 }

@@ -32,7 +32,7 @@ public class OpenController
     @Autowired
     private RoleService roleService;
 
-    @PostMapping(value = "/createnewuser",
+    @PostMapping(value = "/signup",
                  consumes = {"application/json"},
                  produces = {"application/json"})
     public ResponseEntity<?> addNewUser(HttpServletRequest request, @Valid
