@@ -6,7 +6,7 @@ https://theadvice-giver.herokuapp.com/signup
 
 ### required fields
 
-{
+{   
      "age": 66,  
       "email": "example@example.com",  
       "firstname": "john",  
@@ -18,10 +18,10 @@ https://theadvice-giver.herokuapp.com/signup
         
 }
 
-## Sign Up endpoint
+## Sign in endpoint
 https://theadvice-giver.herokuapp.com/signin
-### authentication type: Oauth 2.0
-### required fields: username and password
+authentication type: Oauth 2.0
+required fields: username and password
 
 ## User Endpoints
 https://theadvice-giver.herokuapp.com/users  
@@ -39,7 +39,7 @@ GET: /myposts ==> lists a post by logged in user  <br>
 POST: /add ==> add a new post ( logged in user as an owner)  <br>
 
 required fields   
-{
+{  
       "title": "example title",   
       "description": "example description",    
       "Posttype": "example post type : accounting "   
