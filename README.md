@@ -24,12 +24,12 @@ https://theadvice-giver.herokuapp.com/signin
 ### required fields: username and password
 
 ## User Endpoints
-https://theadvice-giver.herokuapp.com/users
-GET: /users ==> list all users 
-GET: /user/{userid}==> get user by userid 
-GET: /getusername ==> returns a user object with account status
-PUT : /user/{userid}==> edit user info 
-DELETE: /user/{userid} ==> delete user with a given id 
+https://theadvice-giver.herokuapp.com/users  
+GET: /users ==> list all users   
+GET: /user/{userid}==> get user by userid   
+GET: /getusername ==> returns a user object with account status    
+PUT : /user/{userid}==> edit user info       
+DELETE: /user/{userid} ==> delete user with a given id     
 
 ## POST  Endpoints
 https://theadvice-giver.herokuapp.com/post
