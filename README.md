@@ -7,14 +7,14 @@ https://theadvice-giver.herokuapp.com/signup
 ### required fields
 
 {
-     "age": 66,
-      "email": "example@example.com",
-      "firstname": "john",
-      "gender": "Male",
-      "lastname": "Doe ",
-      "password": "1234qaz",
-      "username": "john",
-      "usertype": "Advice seeker"
+     "age": 66,  
+      "email": "example@example.com",  
+      "firstname": "john",  
+      "gender": "Male",  
+      "lastname": "Doe ",  
+      "password": "1234qaz",  
+      "username": "john",  
+      "usertype": "Advice seeker"  
         
 }
 
@@ -32,20 +32,22 @@ PUT : /user/{userid}==> edit user info
 DELETE: /user/{userid} ==> delete user with a given id     
 
 ## POST  Endpoints
-https://theadvice-giver.herokuapp.com/post
-GET: /feed ==> post home page 
-GET: /{postid} ==> get a post by postid
-GET: /myposts ==> lists a post by logged in user
-POST: /add ==> add a new post ( logged in user as an owner)
-required fields 
+https://theadvice-giver.herokuapp.com/post  <br> 
+GET: /feed ==> post home page  <br> 
+GET: /{postid} ==> get a post by postid  <br>  
+GET: /myposts ==> lists a post by logged in user  <br> 
+POST: /add ==> add a new post ( logged in user as an owner)  <br>
+
+required fields   
 {
-      "title": "example title", 
-      "description": "example description", 
-      "Posttype": "example post type : accounting "
+      "title": "example title",   
+      "description": "example description",    
+      "Posttype": "example post type : accounting "   
         
 }
-PUT: /edit/{postid} ==> edit a post by id 
-DELETE: /delete/{postid} ==> delete post by id
+
+PUT: /edit/{postid} ==> edit a post by id   
+DELETE: /delete/{postid} ==> delete post by id  
 
 
 # Libraries and Frameworks Used
