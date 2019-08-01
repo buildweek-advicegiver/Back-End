@@ -1,31 +1,53 @@
-# Back-End
+# Advice-Giver backend root API
+https://theadvice-giver.herokuapp.com
 
-Product Canvas: https://docs.google.com/document/d/1S90eZTHKlMqOA5b_s7Ty6g862dDSAmHBqCksB503afs/edit
+## Sign Up endpoint
+https://theadvice-giver.herokuapp.com/signup
 
-link for Node: https://www.notion.so/04382aff1e09483dac0e29446ec4ef6f?v=3c1f346ae7b04962919385e74176d883
+### required fields
+
+{
+     "age": 66,
+      "email": "example@example.com",
+      "firstname": "john",
+      "gender": "Male",
+      "lastname": "Doe ",
+      "password": "1234qaz",
+      "username": "john",
+      "usertype": "Advice seeker"
+        
+}
+
+## Sign Up endpoint
+https://theadvice-giver.herokuapp.com/signin
+### authentication type: Oauth 2.0
+### required fields: username and password
+
+## User Endpoints
+https://theadvice-giver.herokuapp.com/users
+GET: /users ==> list all users 
+GET: /user/{userid}==> get user by userid 
+GET: /getusername ==> returns a user object with account status
+PUT : /user/{userid}==> edit user info 
+DELETE: /user/{userid} ==> delete user with a given id 
+
+## POST  Endpoints
+https://theadvice-giver.herokuapp.com/post
+GET: /feed ==> post home page 
+GET: /{postid} ==> get a post by postid
+GET: /myposts ==> lists a post by logged in user
+POST: /add ==> add a new post ( logged in user as an owner)
+required fields 
+{
+      "title": "example title", 
+      "description": "example description", 
+      "Posttype": "example post type : accounting "
+        
+}
+PUT: /edit/{postid} ==> edit a post by id 
+DELETE: /delete/{postid} ==> delete post by id
 
 
-link for Java: https://www.notion.so/afe9bda1f3ba4f539ab5edd6f3c61613?v=6491d80f09a74a7ba92208e33e2a61e9
+# Libraries and Frameworks Used
+Spring MVC, Spring Boot, Tomcat , Maven, swagger, hibernate, postgreSQL
 
-### You will build a Web API in coordination with the front end team.
-
-The API should provide the endpoints that the front end needs to complete client requirements and demonstrate your proficiency in the skills you've learned so far.
-
-The API should be built using the REST architectural pattern, provide data persistence, incorporate authentication, include automated tests and be deployed to a hosting platform of your choice.
-
-## **Team Members:**
-All links will direct to each person's GitHub profile.
-
-Sanny Sherief - UI Developer: https://github.com/sanny-io
-
-Ian Sanchez - UI Developer: https://github.com/slimylizard
-
-Kelly Moreira - Front-End Developer: https://github.com/misskellymore
-
-Alexis Panyathong - Front-End Developer: https://github.com/AlexisPanyathong
-
-Mariam Farrukh - Front-End Developer: https://github.com/mariam-farrukh
-
-Blair Reynolds - Front-End Developer: https://github.com/JiJi190
-
-Firealem Erko - Back-End Developer: https://github.com/ferko18
